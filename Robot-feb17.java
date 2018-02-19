@@ -1,25 +1,30 @@
-//Robot.java				2/17/18
 package org.usfirst.frc.team6372.robot;
-//package org.usfirst.frc.team6372.robot;
 
 import edu.wpi.first.wpilibj.CameraServer;
 import edu.wpi.first.wpilibj.DriverStation;
-
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.Joystick;
-//import edu.wpi.first.wpilibj.RobotDrive;
+
+import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj.Timer;
 
+//@SuppressWarnings("deprecation")
 public class Robot extends IterativeRobot {
   public static final Subsystem exampleSubsystem = null;
   DriveTrain driveTrain;
   //DriverStation getGameSpecificMessage;
   DriverStation driverStation;
+  DifferentialDrive differentialDrive;
   XboxController joystick;
   Joystick joystickx;
   Timer timer = new Timer();
+  //DifferentialDrive drive = new differentialDrive(1,2,3,4);
+
+  public class DifferentialDrive extends IterativeRobot {
+    DifferentialDrive drive = new DifferentialDrive();
+  }
 
   @Override
   public void robotInit() {
@@ -47,8 +52,6 @@ public class Robot extends IterativeRobot {
     /*		 if (timer.get() < 1.5) {
     			driveTrain.drive(-0.53, -0.57);
     		}
-    
-    		
     
     		 else if (timer.get() == 1.5) {
     				driveTrain.drive(0.0, 0.0, 0);

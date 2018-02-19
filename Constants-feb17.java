@@ -1,5 +1,3 @@
-//Constants.java			2/17/18
-
 package org.usfirst.frc.team6372.robot;
 
 import edu.wpi.first.wpilibj.Spark;
